@@ -6,10 +6,10 @@
   <title>Document</title>
 </head>
 <body>
+  <p id="notice"><%=  notice %> </p>
   <p><strong>Title:</strong><%= @book.title %></p>
   <p><strong>Body:</strong><%= @book.body %></p>
-  <!--後ほどリンクに変更する-->
-  <p>Edit</p>
-  <p>Back</p>
+  <%= link_to "Edit", edit_book_path(@book.id) %>
+  <%= link_to "Back", books_path %>
 </body>
 </html>
